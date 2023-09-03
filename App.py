@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, flash
 app = Flask(__name__)
 
 
-app.secret_key = 'ikjfsajfsfslsfjasfj8486487zd85d4s54df7s6df5s4dd87sdf4'
+app.secret_key = 'a5288a57111b35f98fc47e58a083106476808dd0a206f41c'
 
 output = 'M2012'
 slices_ID = [
@@ -141,7 +141,7 @@ options = {
         
     }
     
-@app.route('/Search_items')
+@app.route('/hex')
 def index():
     flash("Articles")
     return render_template("index.html")
@@ -149,6 +149,7 @@ def index():
 @app.route("/process_input", methods=["POST", "GET"])
 def process_input():
     slices_Article = request.form.get("user_input")
+    slices_Article = slices_Article.replace(" ", "").upper()
     if slices_Article in slices_ID:
         items = options[slices_Article]
         flash('Pieces Article, slice ' + slices_Article)

@@ -141,7 +141,7 @@ options = {
         
     }
     
-@app.route('/hex')
+@app.route('/Search_items')
 def index():
     flash("Articles")
     return render_template("index.html")

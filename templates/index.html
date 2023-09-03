@@ -1,22 +1,25 @@
-CTYPE html>
+<!DOCTYPE html>
 <html>
-	    <head>
-		            <meta charset="UTF-8">
-			            <title>ZGGTT</title>
-				            <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-					        </head>
-						    <body>
-							            <img src='Untitled.png'>
-								            <br>
-									            <form action="greet" method="post">
-											                {% for message in get_flashed_messages()%}
-													                <p>{{message}}</p>
-															            {% endfor %}
-																                <br>
-																		            <input type="text" name="name_input">
-																			                <br>
-																					            <input type="submit" value="GREET" id="greet">
-																						            </form>
-																							        </body>
+    <head>
+        <meta charset="UTF-8">
+        <title>LAMX</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="https://media.tenor.com/GryShD35-psAAAAC/troll-face-creepy-smile.gif" alt="Logo">
+        <br>
+        <form method="POST" action="/process_input">
+            <label for="user_input">Slice Items</label>
+            <input class="user_input" type="text" placeholder="Type M201..." id="user_input" name="user_input">
+            <br>
+            <input type="submit" value="SUBMIT" id="process_input">
+            <div class="centered-div">
+                <div id="message_box">
+                    {% for message in get_flashed_messages() %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
-

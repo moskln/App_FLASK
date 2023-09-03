@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, flash
 app = Flask(__name__)
 
 
-app.secret_key = 'a5288a57111b35f98fc47e58a083106476808dd0a206f41c'
+app.secret_key = 'ikjfsajfsfslsfjasfj8486487zd85d4s54df7s6df5s4dd87sdf4'
 
 output = 'M2012'
 slices_ID = [

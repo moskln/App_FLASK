@@ -1,38 +1,94 @@
+body {
+    background-color: slategray;
+    text-align: center;
+}
+p {
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+label {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.2em;
+    margin: 20px 20px 0px 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+     /* Make the form fill the entire viewport height */
+}
 
-dy {
-	    background-color: slategray;
-	        text-align: center;
-	}
-	p {
-		    color: white;
-		        font-family: Shanti;
-			    font-size: 1.2em;
-			        margin: 20px;
-			}
-			img {
-				    margin: 60px 0 30px 0;
-				        width: 250px;
-				}
-				input {
-					    width: 300px;
-					        height: 50px;
-						    margin: 20px;
-						        border: none;
-							    border-radius: 10px;
-							        font-family: Shanti;
-								    text-align: center;
-								        font-size: 1.3em;
-								}
-								input:focus {
-									    border: solid 1.2px hsl(168, 100%, 91%);
-									        outline: none;
-									}
-									#greet {
-										    background-color: rgb(159, 208, 255);
-										        color: white;
-											    width: 200px;
-										    }
-										    #greet:hover {
-											        background-color: #212050;
-												    cursor: pointer;
-											    }
+img {
+    margin: 0px 0 30px 0;
+    width: 250px;
+    border-radius: 50%;
+}
+.centered-div {
+    width: 333px;
+    border: solid 1.5px #212050;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#message_box {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.2em;
+    /* Add any additional styles you need for the message box here */
+}
+
+/* Style the text input */
+.user_input[type="text"] {
+     /* Set the width to 100% of its container */
+    padding: 10px; /* Add padding for better visual appearance */
+    font-size: 16px; /* Adjust the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+/* Style the placeholder text */
+.user_input[type="text"]::placeholder {
+    color: #999; /* Change the color of the placeholder text */
+    font-style: italic; /* Optionally, you can make it italic */
+}
+
+/* Add the shake animation */
+.user_input[type="text"]:focus {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+input {
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.3em;
+}
+input:focus {
+    border: solid 1.2px hsl(168, 100%, 91%);
+    outline: none;
+}
+#process_input {
+    background-color: rgb(159, 208, 255);
+    color: white;
+    width: 200px;
+}
+#process_input:hover {
+    background-color: #212050;
+    cursor: pointer;
+}
